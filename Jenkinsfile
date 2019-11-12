@@ -1,14 +1,44 @@
-
 pipeline {
-   agent { label 'SLAVE_Runner' }
+    agent any
     stages {
-        
-        stage('Checkout') {
-            steps {
-        checkout scm
+        stage('Back-end') {
+            agent {
+                docker { image 'maven:3-alpine' }
             }
+            
+            steps {
+                sh 'mvn --version'
+            }
+        }
+        
     }
-      
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    
         
       
