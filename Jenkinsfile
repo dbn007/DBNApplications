@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'SLAVE_Runner' }
     stages {
         stage('Back-end') {
             agent {
