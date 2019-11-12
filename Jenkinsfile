@@ -1,13 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('SonarQube analysis') { 
-             steps {
-                sh 'mvn clean install'
-                withSonarQubeEnv('sonar') { 
-                sh 'mvn sonar:sonar'
-                }
-        }
+        stage('Back-end') {
+            agent {
+                docker { image 'maven:3-alpine' }
+            }
+            
+            steps {
+                sh 'mvn --version'
+            }
         }
         
     }
