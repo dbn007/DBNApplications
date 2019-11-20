@@ -1,5 +1,5 @@
 ---
-- hosts: apache
+- hosts: IMPLservers
   sudo: yes
   tasks:
     - name: install apache2
