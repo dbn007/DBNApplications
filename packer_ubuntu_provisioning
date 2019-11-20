@@ -23,7 +23,7 @@
             "type": "shell",
             "inline":[
                 "ls -al /home/ubuntu",
-                "touch /home/ubuntu/welcome.txt"
+                "touch /home/ubuntu/welcome.txt",
                 "cat /home/ubuntu/welcome.txt"
             ]
         },
